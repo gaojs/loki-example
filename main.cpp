@@ -27,7 +27,7 @@ int main()
     }
     std::cout << std::string("cursor move and click.") << std::endl;
     Sleep(3000);
-    // (x,y) 为屏幕大小（1920x768）
+    // point(x,y) is in screen(1920x768).
     std::cout << "move to (1500,100) and click "<< std::endl;
     mouse.moveCursor(1500, 100);
     mouse.rightButtonClick();
