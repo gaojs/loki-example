@@ -25,21 +25,18 @@ int main()
         std::cout << std::string("Keyboard initialization: ") + e.what() << std::endl;
         return EXIT_FAILURE;
     }
+    std::cout << std::string("cursor move and click.") << std::endl;
+    Sleep(3000);
+    // (x,y) 为屏幕大小（1920x768）
+    std::cout << "move to (1500,100) and click "<< std::endl;
+    mouse.moveCursor(1500, 100);
+    mouse.rightButtonClick();
+    Sleep(1000);
+    std::cout << "move to (1300,300) and click " << std::endl;
+    mouse.moveCursor(1300, 300);
+    mouse.rightButtonClick();
+    Sleep(1000);
 
-    Sleep(5000);
-
-    mouse.moveCursor(136, 271);
-    mouse.leftButtonClick();
-    Sleep(500);
-    mouse.moveCursor(56, 315);
-    mouse.leftButtonClick();
-    Sleep(500);
-    mouse.moveCursor(283, 350);
-    mouse.leftButtonClick();
-    Sleep(500);
-    mouse.moveCursor(275, 271);
-    mouse.leftButtonClick();
-    Sleep(500);
-
+    // system("pause");
     return EXIT_SUCCESS;
 }
